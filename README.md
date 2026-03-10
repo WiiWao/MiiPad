@@ -20,7 +20,17 @@ The MiiPad is a 12 key custom keypad made with mechanical switches, a magnetic c
 - Solder
 - Flux
   
+- KiCad
+- Blender
+- QMK
+  
 ## Process
+
+1. Part Picking
+2. PCB Design
+3. Case Design
+4. Soldering
+5. Firmware Configuration
 
 ## PCB
 
