@@ -32,11 +32,18 @@ The MiiPad is a 12 key custom keypad made with mechanical switches, a magnetic c
 5. Firmware Configuration
 
 ## PCB
+Making a PCB comes in 2 parts, the schematic, and the design; I did both in KiCad, as it's a popular and free PCB design software.
+
+The schematic is a file comprised of everything your PCB will have: microcontroller, diodes, connections, coated cutouts. Make sure the things that need to be connected are connected via the wire tool, or global labels.
+
+The design is where everything is laid out, the finished product will be a 1 to 1 of your design, so this part is extremely important.
+
 
 ## Case
 
 ## Soldering
 
 ## Firmware
+QMK
 
 ## Extras
