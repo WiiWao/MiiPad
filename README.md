@@ -48,9 +48,9 @@ I had to recreate the 4x3 matrix that was made in the schematic, paired with eac
 ## Case
 The case was made in blender, any 3D modeling software can work, but it was free and something I had a little bit of prior experience with so it was my first pick. Typically keyboard cases are broken down into 3 components: top, bottom, and plate. The plate is actually not required for soldered on switches, but I decided to include it because it gives the keypad some more rigidity.
 
-The overall design is very minimal, just a rectangle with some beveling so it doesn't feel sharp. Actually modeling it was not so simple. I decided to merge the plate and the housing to make soldering later easier, however this made 3d modeling a bit harder. Instead of just making a case, I had to make sure the measurements of where the switches would be, the pcb, the microcontroller usb-c connections, and the usb-c cutout would all match up. I had to find a model of both the switches and the microcontroller board to make sure the dimensions of the top case was correct. Next is the bottom half, but it was made with just duplicating the top, filling the holes, and then chopping a good portion of it off(it's 1/5 the height of the top).
+The overall design is very minimal, just a rectangle with some beveling so it doesn't feel sharp. Actually modeling it was not so simple because I decided to merge the plate and the housing to make soldering later easier. Fusing the walls and plate into one meant the dimensions would have to be extra precise, as with pieces so small, a single milimeter could ruin it. The bottom is just a duplicate of the top, but rotated, holes filled, and height chopped (it's around 1/4 the height of the top).
 
-Initially the top and bottom were to be super glued on, but I decided to use magnets to hold the top and bottom together. This would allow me to open the case up incase a switch broke or I find out my soldering is not the best. I would just add 4 holes (2x2x1mm) into the top and bottom housing, 1 in each corner. I ran into one problem with this, which is that the corner walls were not thick enough, so I just made it thicker. However this made me realized an extremely big problem, originally my walls were 1mm thick, which is way too thin for the 3D printer I have, generally not recommended for a print like this, and it poses a risk of being too fragile if I were to bring this keypad around. The walls were shortly made to be 4mm wide instead, which fits well with the corner magnets.
+Towards the end I decided magnets would be better than just superglueing the 2 halves together, this lets me have a solid case with the ability to open it incase I need to replace any of the switches or if something just breaks in general. The magnets were 2x2x1mm cylinders, which fit perfectly in the corners of my 4mm thick walls. Both models have a 2x2x2mm cylinder hole in each of the 4 corners.
 
 ## Soldering
 Not much to say here other than to know what you're doing and using. Prepare a decently sized flat top somewhere with good ventilation, keep things organized, and apply flux as needed. I ended up having to resolder the microcontroller and a diode because they were trickier to work due to them being flat on the board, compared to the switches poking out from the other side. Another plus of having the top part being one joint piece is that you can snap the switches into place, then flip it around and solder it without them popping off the pcb or having to re-align them.
@@ -63,11 +63,11 @@ Instead of making my owm firmware from scratch, there is an open source firmware
 4. Support macro keys
 
 QMK provides the 2 main files needed, config.h and keymap.c files.
-config.h sets the rules for your keypad:debounce, registration time.
-keymap.c is where the actual keys are programmed.
+- config.h sets the rules for your keypad:debounce, registration time.
+- keymap.c is where the actual keys are programmed.
 
 They provide a [list of pre-made keycodes](https://docs.qmk.fm/keycodes), these go from single letters to layer control.
 
 
 
-## Extras
+## Resources
