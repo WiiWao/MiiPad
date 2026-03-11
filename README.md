@@ -46,8 +46,14 @@ I had to recreate the 4x3 matrix that was made in the schematic, paired with eac
 
 
 ## Case
+The case was made in blender, any 3D modeling software can work, but it was free and something I had a little bit of prior experience with so it was my first pick. Typically keyboard cases are broken down into 3 components: top, bottom, and plate. The plate is actually not required for soldered on switches, but I decided to include it because it gives the keypad some more rigidity.
+
+The overall design is very minimalistic, just a rectangle with some beveling so it doesn't feel sharp. Actually modeling it was not so simple. I decided to merge the plate and the housing to make soldering later easier, however this made 3d modeling a bit harder. Instead of just making a case, I had to make sure the measurements of where the switches would be, the pcb, the microcontroller usb-c connections, and the usb-c cutout would all match up. I had to find a model of both the switches and the microcontroller board to make sure the dimensions of the top case was correct. Next is the bottom half, but it was made with just duplicating the top, filling the holes, and then chopping a good portion of it off(it's 1/5 the height of the top).
+
+Initially the top and bottom were to be super glued on, but I decided to use magnets to hold the top and bottom together. This would allow me to open the case up incase a switch broke or I find out my soldering is not the best. I would just add 4 holes (2x2x1mm) into the top and bottom housing, 1 in each corner. I ran into one problem with this, which is that the corner walls were not thick enough, so I just made it thicker. However this made me realized an extremely big problem, originally my walls were 1mm thick, which is way too thin for the 3D printer I have, generally not recommended for a print like this, and it poses a risk of being too fragile if I were to bring this keypad around. The walls were shortly made to be 4mm wide instead, which fits well with the corner magnets.
 
 ## Soldering
+Not much to say here other than to know what you're doing and using. Prepare a decently sized flat top somewhere with good ventilation, keep things organized, and apply flux as needed. I ended up having to resolder the microcontroller and a diode because they were trickier to work due to them being flat on the board, compared to the switches poking out from the other side. Another plus of having the top part being one joint piece is that you can snap the switches into place, then flip it around and solder it without them popping off the pcb or having to re-align them.
 
 ## Firmware - QMK
 Instead of making my owm firmware from scratch, there is a firmware called QMK that is popular within the mechanical keyboard market/community.
