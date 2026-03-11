@@ -63,7 +63,9 @@ Instead of making my owm firmware from scratch, there is an open source firmware
 4. Support macro keys
 
 QMK provides the 2 main files needed, config.h and keymap.c files.
-config.h sets the rules for your keypad:debounce, registration time.  
+
+config.h sets the rules for your keypad:debounce, registration time.
+
 keymap.c is where the actual keys are programmed.
 
 They provide a [list of pre-made keycodes](https://docs.qmk.fm/keycodes), these go from single letters to layer control.
