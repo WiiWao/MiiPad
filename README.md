@@ -32,25 +32,25 @@ The MiiPad is a 12 key custom keypad made with mechanical switches, a magnetic c
 5. Firmware Configuration
 
 ## PCB - Schematic
-Making a PCB comes in 2 parts, the schematic, and the design; I did both in KiCad, as it's a popular and free PCB design software.
+Making a PCB comes in 2 main parts, the schematic, and the design. I did both in KiCad, as it's a popular and free PCB design tool.
 
-The schematic is a file comprised of everything your PCB will have: microcontroller, diodes, connections, coated cutouts. Make sure the things that need to be connected are connected via the wire tool, or global labels. Each thing in your schematic comes in the form of a symbol, and most of the time there is a footprint attached to it. Footprints will be used later to make the design.
+The schematic is a file comprised of everything your PCB will have: microcontroller, diodes, and connections. In KiCad, each thing in your schematic comes in the form of a symbol, and most of the time linked to a footprint, which will be used later. These symbols are them connected with the wiring tool
 
 Earlier I picked out a 4x3 matrix for the layout, so that will be created with 12 switch symbols, alongside a diode symbol for each one. Under each row of switches, there will be a horizontal wire that is connected to the ends of each diode in that row, the same applies with a vertical wire and each column.
 
 
 ## PCB - Design
-The design is where everything is laid out, the design will be a 1 to 1 of the actual PCB, so it is very important that everything is at the right place. The items come as the footprints attached to the symbols used in the schematic, each foodprint represents the actual marking/cutout that will be on the PCB.
+The design is where everything is laid out, the design will be a 1:1 of the actual PCB, placement and dimensions need to be accurate. The items come as the footprints attached to the symbols used in the schematic, each footprint represents a marking or cutout on the PCB.
 
-I had to recreate the 4x3 matrix that was made in the schematic, paired with each switch in the matrix is the diode corresponding to it. Making sure they are lined up correctly so wiring them would be simpler and more organized. The microcontroller sits on the top with 4 pins connected to rows, and 3 connected to columns.
+I had to make the 4x3 matrix that was made in the schematic, paired with each switch in the matrix is the diode corresponding to it. Making sure they are lined up correctly so wiring them would be simpler and more organized. The microcontroller sits on the top with 4 pins connected to rows, and 3 connected to columns.
 
 
 ## Case
-The case was made in blender, any 3D modeling software can work, but it was free and something I had a little bit of prior experience with so it was my first pick. Typically keyboard cases are broken down into 3 components: top, bottom, and plate. The plate is actually not required for soldered on switches, but I decided to include it because it gives the keypad some more rigidity.
+The case was made in Blender, any 3D modeling software can work, but it's free and something I had a little bit of prior experience with so it was my first pick. Typically keyboard cases are broken down into 3 components: top, bottom, and plate. The plate is actually not required for soldered on switches, but I decided to include it because it gives the keypad some more rigidity.
 
-The overall design is very minimal, just a rectangle with some beveling so it doesn't feel sharp. Actually modeling it was not so simple because I decided to merge the plate and the housing to make soldering later easier. Fusing the walls and plate into one meant the dimensions would have to be extra precise, as with pieces so small, a single milimeter could ruin it. The bottom is just a duplicate of the top, but rotated, holes filled, and height chopped (it's around 1/4 the height of the top).
+The overall design is very minimal, just a rectangle with some beveling so it doesn't feel sharp. Actually modeling it was not so simple because I decided to merge the plate and the housing to make soldering later easier. Fusing the walls and plate into one meant the dimensions would have to be extra precise, as with pieces so small, a single milimeter difference could cause problems. The bottom is just a duplicate of the top, but rotated, holes filled, and shortened.
 
-Towards the end I decided magnets would be better than just superglueing the 2 halves together, this lets me have a solid case with the ability to open it incase I need to replace any of the switches or if something just breaks in general. The magnets were 2x2x1mm cylinders, which fit perfectly in the corners of my 4mm thick walls. Both models have a 2x2x2mm cylinder hole in each of the 4 corners.
+Towards the end I decided magnets would be better than just gluing the 2 halves together, this lets me have a solid case with the ability to open it in case I need to replace any of the switches or if something just breaks in general. The magnets were 2x2x2mm cylinders, which fit perfectly in the corners of my 4mm thick walls. Both models have a 2x2x2mm cylinder hole in each of the 4 corners.
 
 ## Soldering
 There's not that much to soldering, the only important thing to take note is finding a stable workspace with decent air ventilation. I ended up doing it in my room right next to a window with a fan sucking the fumes straight outside. The only real issue I had was soldering the diodes, as the extremely small size gave me some trouble, but a pair of tweezers and patience got the job done.
